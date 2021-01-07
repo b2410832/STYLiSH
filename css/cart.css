@@ -1,0 +1,282 @@
+/* ========================== 
+            Global
+============================= */
+
+select {
+    border-radius: 5px;
+    border: solid 1px #979797;
+    background-color: #f3f3f3;
+    padding: 4px;
+}
+
+/* ========================== 
+            Base
+============================= */
+
+/*    main   */
+main {
+    padding: 20px 0px;
+    color: #3f3a3a;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.shopping-cart .row.item-title {
+    padding: 10px 40px 10px 20px;
+    font-weight: bold;
+}
+
+.shopping-cart .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-items: center;
+}
+
+.shopping-cart .qty,
+.shopping-cart .price,
+.shopping-cart .subtotal {
+    flex: 1;
+}
+
+.shopping-cart .item-list {
+    border: 1px solid #979797;
+    padding: 10px;
+}
+
+.shopping-cart .summary {
+    width: 300px;
+    display: flex;
+}
+
+.shopping-cart .summary .mainImg {
+    width: 100px;
+}
+
+.shopping-cart .summary .details {
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+.shopping-cart .item-list .remove-item {
+    cursor: pointer;
+    width: 50px;
+}
+
+.shopping-cart .item-list .remove-item img {
+    height: 40px;
+    width: 40px;
+}
+
+.target {
+    background-color: #e8e8e8;
+    margin: 25px 0;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+}
+
+.target .title {
+    margin-right: 10px;
+}
+
+.target .country {
+    display: inline-flex;
+    flex: 1;
+    align-items: center;
+}
+
+.reminder {
+    margin: 20px 0;
+}
+
+.recipient .title,
+.payment .title {
+    font-weight: bold;
+    border-bottom: 1px solid #3f3a3a;
+    padding: 10px 0;
+}
+
+.recipient .row,
+.payment .row {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.recipient .row .text,
+.payment .row .text {
+    width: 150px;
+}
+
+.recipient .row .input,
+.payment .row .input {
+    flex: auto;
+}
+
+.recipient .row .input input[type="text"] {
+    padding: 3px;
+    width: 200px;
+}
+
+.recipient .row .input label {
+    margin-right: 10px;
+}
+
+.tpfield {
+    height: 30px;
+    width: 200px;
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+small {
+    color: rgb(196, 0, 0);
+    font-size: 14px;
+}
+
+.payment {
+    border-bottom: 1px solid #3f3a3a;
+}
+
+.confirm {
+    width: 30%;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+.confirm .row {
+    width: 100%;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirm .price .unit {
+    font-size: 1.25em;
+}
+
+.confirm .price .number {
+    font-size: 1.5em;
+}
+
+.confirm .line {
+    width: 100%;
+    height: 1px;
+    background-color: #3f3a3a;
+}
+
+.confirm .pay button {
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    border: solid 1px #979797;
+    padding: 10px 20px;
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+
+.confirm .pay button:disabled {
+    opacity: 0.25;
+    cursor: default;
+}
+
+/* ===================
+    Media Query
+=================== */
+@media (max-width: 1000px) {
+    /*    main   */
+    main {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 700px) {
+    /*    main   */
+    .shopping-cart .item-title {
+        display: none;
+    }
+    .shopping-cart .item-list .row {
+        padding: 30px 0px;
+    }
+    .shopping-cart .item-list .row:first-child {
+        padding-top: 0;
+    }
+    .shopping-cart .item-list .row:last-child {
+        padding-bottom: 0;
+    }
+    .shopping-cart .item-list .summary {
+        order: 1;
+        width: 90%;
+    }
+    .shopping-cart .item-list .remove-item {
+        order: 2;
+        width: 10%;
+        align-self: flex-start;
+    }
+    .shopping-cart .item-list .qty {
+        order: 3;
+        text-align: center;
+    }
+    .shopping-cart .item-list .qty::before {
+        content: "數量";
+        display: block;
+    }
+    .shopping-cart .item-list .price {
+        order: 4;
+        text-align: center;
+    }
+    .shopping-cart .item-list .price::before {
+        content: "單價";
+        display: block;
+    }
+    .shopping-cart .item-list .subtotal {
+        order: 5;
+        text-align: center;
+    }
+    .shopping-cart .item-list .subtotal::before {
+        content: "小計";
+        display: block;
+    }
+    .shopping-cart .row:not(:last-child) {
+        border-bottom: 1px solid #3f3a3a;
+    }
+    .target {
+        padding: 20px;
+    }
+    .target .country {
+        display: inline-block;
+    }
+    .recipient .row,
+    .payment .row {
+        display: block;
+    }
+    .recipient .row .input input[type="text"],
+    .tpfield {
+        width: 100%;
+    }
+    .recipient .row .input label {
+        display: block;
+    }
+    .recipient .row .text,
+    .payment .row .text {
+        margin-bottom: 10px;
+    }
+    .confirm {
+        width: 100%;
+    }
+    .confirm .subtotal,
+    .confirm .shipping,
+    .confirm .line,
+    .confirm .total {
+        width: 200px;
+        margin-left: auto;
+    }
+}

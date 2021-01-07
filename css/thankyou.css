@@ -1,0 +1,51 @@
+/*    main   */
+main {
+    text-align: center;
+    margin-bottom: 300px;
+    margin-top: 100px;
+}
+
+main .title {
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #979797;
+    width: 90%;
+    max-width: 900px;
+}
+
+main .order .number {
+    background-color: #eeeeee;
+    width: 130px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+main .continue {
+    margin: 50px auto 0 auto;
+    background-color: #313538;
+    width: 150px;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+main .continue a {
+    color: #ffffff;
+    letter-spacing: 4px;
+    width: 100%;
+    height: 100%;
+}
+
+/* ===================
+    Media Query
+=================== */
+@media (max-width: 1000px) {
+    main {
+        margin-top: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        margin-top: 150px;
+    }
+}

@@ -1,0 +1,524 @@
+/* ========================== 
+            Global
+============================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #3f3a3a;
+    font-family: "Noto Sans TC", "微軟正黑體", "新細明體", arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #3f3a3a;
+    display: inline-block;
+}
+
+img {
+    width: 100%;
+}
+
+/* ========================== 
+            Base
+============================= */
+/*    header   */
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+}
+
+.logo {
+    padding-left: 30px;
+}
+
+.logo img {
+    width: auto;
+    height: 48px;
+}
+
+header > nav {
+    display: flex;
+}
+
+nav .item.current a {
+    color: #8b572a;
+}
+
+nav .item {
+    width: 90px;
+    letter-spacing: 25px;
+    margin-left: 30px;
+    border-right: 1px solid;
+}
+
+nav .item a:hover {
+    color: #8b572a;
+}
+
+nav .item a:focus {
+    color: #8b572a;
+}
+
+nav .item:last-child {
+    border-right: none;
+}
+
+nav.mobile {
+    background-color: #313538;
+    height: 20px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.feature .search {
+    background-image: url(../images/search.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: right center;
+    border: 1px solid #979797;
+    border-radius: 20px;
+    width: 180px;
+    margin-right: 20px;
+    padding: 10px 40px 10px 10px;
+}
+
+.feature .search:focus {
+    outline: none;
+}
+
+.feature .cart {
+    background-image: url(../images/cart.png);
+    background-repeat: no-repeat;
+    background-size: 44px;
+    background-position: center;
+    width: 44px;
+    height: 44px;
+}
+
+.feature .member {
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+}
+
+.mobile-feature .quantity,
+.feature .quantity {
+    background-color: #8b572a;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    color: #fff;
+    opacity: 0.8;
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 18px 0 0 18px;
+    line-height: 24px;
+}
+
+.mobile .item {
+    display: none;
+}
+
+.mobile-feature {
+    display: none;
+}
+
+/*    key visual   */
+.keyvisual {
+    height: 31.25rem;
+    width: 100%;
+    position: relative;
+    /* 只顯示一張圖 */
+    overflow: hidden;
+}
+
+.keyvisual .visual {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(./images/keyvisual-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 10;
+}
+
+.keyvisual .visual.current {
+    opacity: 1;
+    z-index: 80;
+}
+
+.keyvisual .visual .wording {
+    padding-top: 200px;
+    font-size: 20px;
+    width: 60%;
+    margin: 0 auto;
+    line-height: 40px;
+    text-shadow: 0px 0px 5px #ffffff;
+}
+
+.keyvisual .steps {
+    width: 100px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 80;
+}
+
+.keyvisual .steps .circle {
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    margin: 0 10px;
+    border-radius: 50%;
+    opacity: 0.75;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+.keyvisual .steps .circle.current {
+    background-color: #000;
+    z-index: 50;
+}
+
+/*    main   */
+main {
+    padding: 20px 0px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    line-height: 2em;
+    letter-spacing: 4px;
+}
+
+main .product {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: block;
+    width: 28%;
+}
+
+main .product .colors {
+    margin: 10px 0 5px;
+}
+
+main .product .color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    box-shadow: 0px 0px 1px #bbbbbb;
+}
+
+/*    footer   */
+footer {
+    font-size: 0.8rem;
+    color: #f5f5f5;
+    background-color: #313538;
+    padding: 20px 0 220px;
+}
+
+footer .footer-group {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .links {
+    display: flex;
+    align-items: center;
+}
+
+footer .link {
+    width: 100px;
+    text-align: center;
+    border-right: 1px solid #f5f5f5;
+    cursor: pointer;
+}
+
+footer .link:hover {
+    color: #8b572a;
+}
+
+footer .links-2 .link:last-child {
+    border: none;
+}
+
+footer .social {
+    width: 200px;
+}
+
+footer .social img {
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+    cursor: pointer;
+}
+
+footer .copyright {
+    color: #828282;
+}
+
+/*    loading   */
+.next-paging {
+    height: 200px;
+    display: none;
+}
+
+.next-paging img {
+    display: block;
+    width: 100px;
+    margin: 100px auto;
+}
+
+.loading {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: none;
+}
+
+.loading img {
+    display: block;
+    width: 60px;
+    margin: 100px auto;
+}
+
+/* ===================
+    Media Query
+=================== */
+@media (max-width: 1000px) {
+    /*    header   */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header .logo {
+        width: 190px;
+        margin-left: auto;
+        padding-left: 20px;
+    }
+
+    header .logo img {
+        height: 36px;
+        width: auto;
+    }
+
+    header .feature {
+        width: auto;
+        padding-right: 0px;
+        margin-right: 5px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header .feature .cart,
+    header .feature .member {
+        display: none;
+    }
+
+    .feature .search {
+        border: none;
+        width: 0;
+        margin-right: 0;
+        padding: 10px 20px;
+    }
+
+    .feature .search:focus {
+        border: 1px solid #979797;
+        border-radius: 20px;
+        width: 80%;
+        padding-left: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        outline: none;
+    }
+
+    nav.mobile {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        z-index: 100;
+        width: 100%;
+        height: 40px;
+        padding: 10px 0;
+        display: flex;
+        color: #fff;
+    }
+
+    nav.mobile a {
+        color: #828282;
+        width: 100%;
+    }
+
+    nav.mobile a:hover {
+        color: #fff;
+    }
+
+    nav.mobile .item {
+        display: inline-block;
+        letter-spacing: 0;
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    nav.mobile .item a:focus {
+        color: #fff;
+    }
+
+    nav.mobile .item.current a {
+        color: #fff;
+    }
+
+    .mobile-feature {
+        background-color: #313538;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        z-index: 100;
+    }
+    .mobile-feature .item {
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex: auto;
+        border-right: 1px solid #f5f5f5;
+    }
+
+    .mobile-feature .item:last-child {
+        border: none;
+    }
+
+    .mobile-feature .item .cart {
+        background-image: url(../images/cart-mobile.png);
+        background-repeat: no-repeat;
+        background-size: 40px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+    }
+
+    .mobile-feature .member {
+        cursor: pointer;
+    }
+
+    .mobile-feature .member img {
+        width: 40px;
+    }
+
+    /*    keyvisual   */
+    .keyvisual {
+        margin-top: 100px;
+    }
+
+    /*    footer   */
+
+    footer {
+        padding-bottom: 150px;
+    }
+
+    footer .footer-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    footer .links {
+        display: inline-block;
+        margin-left: 15px;
+    }
+    footer .link {
+        border-right: none;
+        line-height: 30px;
+        width: 80px;
+        text-align: left;
+    }
+
+    footer .social {
+        align-self: center;
+        width: 120px;
+    }
+    footer .social img {
+        width: 24px;
+        height: 24px;
+        margin: 3px;
+    }
+
+    footer .copyright {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    /*    keyvisual   */
+    .keyvisual {
+        height: 400px;
+    }
+    .keyvisual .visual .wording {
+        font-size: 16px;
+        padding-top: 100px;
+    }
+    /*    main   */
+    main .product {
+        width: 45%;
+    }
+}

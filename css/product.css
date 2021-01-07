@@ -1,0 +1,223 @@
+/*    main   */
+main {
+    padding: 20px 0px;
+}
+
+.container {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .main-image {
+    width: 50%;
+    margin: 2%;
+}
+
+main .details {
+    width: 40%;
+    margin: 2%;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+main .details .name {
+    font-size: 1.2em;
+    letter-spacing: 6px;
+}
+
+main .details .id {
+    letter-spacing: 4px;
+    color: #bababa;
+    margin: 5px 0 20px 0;
+}
+
+main .details .price {
+    font-size: 1.2em;
+    border-bottom: 1px solid #3f3a3a;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+main .details .colors,
+main .details .sizes {
+    margin-bottom: 20px;
+}
+
+main .details .title {
+    border-right: 2px solid #3f3a3a;
+    width: 70px;
+    padding-right: 20px;
+    margin-right: 15px;
+}
+
+main .details .colors .color {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    border: 4px solid #fff;
+    box-shadow: 0px 0px 1px #bbbbbb;
+    cursor: pointer;
+}
+
+main .details .colors .color.current {
+    outline: 1px solid #979797;
+}
+
+main .details .sizes .size {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ececec;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+main .details .sizes .size.current {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+main .details .sizes .size.disabled {
+    opacity: 0.25;
+    cursor: default;
+}
+
+main .details .quantity .chooser {
+    display: inline-flex;
+    border: 1px solid #979797;
+    margin-left: 10px;
+    padding: 5px;
+    width: 150px;
+    text-align: center;
+}
+
+main .details .quantity .chooser .option {
+    width: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+main .details .quantity .chooser .qty-value {
+    flex: auto;
+    color: #8b572a;
+}
+
+main .details .add-cart {
+    margin: 30px 0;
+}
+
+main .details .add-cart button {
+    color: #ffffff;
+    background-color: #000000;
+    border: 1px solid #979797;
+    width: 300px;
+    max-width: 100%;
+    padding: 10px;
+    letter-spacing: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+main .separator {
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+main .separator .title {
+    color: #8b572a;
+    width: 150px;
+    margin-right: 10px;
+}
+
+main .separator .line {
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+}
+
+main .description .story,
+main .description .images img {
+    margin-bottom: 30px;
+}
+
+main .description {
+    line-height: 1.5em;
+}
+
+/* ===================
+    Media Query
+=================== */
+@media (max-width: 1000px) {
+    /*    main   */
+    main {
+        margin: 100px 5%;
+    }
+
+    main .details {
+        font-size: 16px;
+        line-height: 1.3em;
+        padding: 10px;
+    }
+    main .details .colors .color,
+    main .details .sizes .size,
+    main .details .quantity .chooser {
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 700px) {
+    /*    main   */
+    main {
+        padding: 0;
+        margin: 0;
+    }
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    main .main-image,
+    main .details {
+        width: 100%;
+    }
+
+    main .main-image {
+        margin: 100px 0 0 0;
+    }
+
+    main .details {
+        margin: 2%;
+    }
+
+    main .details .quantity .title {
+        display: none;
+    }
+
+    main .details .quantity .chooser {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px 5px;
+    }
+
+    main .details .add-cart button {
+        width: 100%;
+    }
+
+    main .separator,
+    main .description {
+        margin: 4%;
+    }
+}

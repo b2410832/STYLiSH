@@ -1,0 +1,35 @@
+{
+    "name": "rosechen",
+    "version": "1.0.0",
+    "description": "## Outline",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/b2410832/STYLiSH.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/b2410832/STYLiSH/issues"
+    },
+    "homepage": "https://github.com/b2410832/STYLiSH#readme",
+    "devDependencies": {
+        "eslint": "^7.12.1",
+        "husky": "^4.3.0",
+        "lint-staged": "^10.4.0",
+        "pre-commit": "^1.2.2",
+        "prettier": "2.1.2"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{html,js,css,md}": "prettier --write"
+    },
+    "pre-commit": ["lint"]
+}

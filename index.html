@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-8Q4FJ7HLHS"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-8Q4FJ7HLHS");
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="Description"
+            content="Stylish讓你買到最新流行的時尚單品，包含女裝、男裝、配件等各類別的優質服飾等你來選購"
+        />
+        <link rel="stylesheet" href="./css/normalize.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <title>Stylish 2020</title>
+    </head>
+    <body>
+        <!-- FB SDK -->
+        <script src="./js/login.js"></script>
+        <!-- header -->
+        <header>
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./images/logo.png" alt="stylish-logo" />
+                </a>
+            </div>
+            <nav>
+                <div class="item women">
+                    <a href="./index.html?tag=women">女裝</a>
+                </div>
+                <div class="item men">
+                    <a href="./index.html?tag=men">男裝</a>
+                </div>
+                <div class="item accessories">
+                    <a href="./index.html?tag=accessories">配件</a>
+                </div>
+            </nav>
+            <div class="feature">
+                <form action="./index.html" method="GET" class="item">
+                    <input type="text" class="search" name="keyword" />
+                </form>
+                <a href="./cart.html" class="item cart">
+                    <div class="quantity"></div>
+                </a>
+                <div class="item member">
+                    <img src="./images/member.png" alt="member-web" />
+                </div>
+            </div>
+        </header>
+        <nav class="mobile">
+            <div class="item women">
+                <a href="./index.html?tag=women">女裝</a>
+            </div>
+            <div class="item men">
+                <a href="./index.html?tag=men">男裝</a>
+            </div>
+            <div class="item accessories">
+                <a href="./index.html?tag=accessories">配件</a>
+            </div>
+        </nav>
+        <div class="mobile-feature">
+            <a href="./cart.html" class="item">
+                <div class="cart">
+                    <div class="quantity"></div>
+                </div>
+                <div>購物車</div>
+            </a>
+            <div class="item member">
+                <img src="./images/member-mobile.png" alt="member-mobile" />
+                <div>會員</div>
+            </div>
+        </div>
+        <!-- key visual -->
+        <div class="keyvisual"></div>
+        <!-- main -->
+        <main>
+            <div class="container">
+                <div class="products"></div>
+            </div>
+        </main>
+        <!-- next paging animation -->
+        <div class="next-paging">
+            <img src="./images/loader.gif" />
+        </div>
+        <!-- footer -->
+        <footer>
+            <div class="footer-group">
+                <div class="links links-1">
+                    <div class="link">關於Stylish</div>
+                    <div class="link">服務條款</div>
+                    <div class="link">隱私政策</div>
+                </div>
+                <div class="links links-2">
+                    <div class="link">聯絡我們</div>
+                    <div class="link">FAQ</div>
+                </div>
+                <div class="social">
+                    <img src="./images/line.png" alt="line" />
+                    <img src="./images/twitter.png" alt="twitter" />
+                    <img src="./images/facebook.png" alt="facebook" />
+                </div>
+                <div class="copyright">&copy; 2018. All rights reserved.</div>
+            </div>
+        </footer>
+        <!-- loading animation -->
+        <div class="loading">
+            <img src="./images/loading.gif" alt="loading" />
+        </div>
+        <script src="./js/login.js"></script>
+        <script src="./js/localStorage.js"></script>
+        <script src="./js/lib.js"></script>
+        <script src="./js/index.js"></script>
+        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    </body>
+</html>

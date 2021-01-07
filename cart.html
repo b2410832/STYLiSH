@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-8Q4FJ7HLHS"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-8Q4FJ7HLHS");
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="Description"
+            content="Stylish讓你買到最新流行的時尚單品，包含女裝、男裝、配件等各類別的優質服飾等你來選購"
+        />
+        <link rel="stylesheet" href="./css/normalize.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/cart.css" />
+        <title>Stylish 購物車</title>
+    </head>
+    <body>
+        <!-- FB SDK -->
+        <script src="./js/login.js"></script>
+        <!-- header -->
+        <header>
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./images/logo.png" alt="stylish-logo" />
+                </a>
+            </div>
+            <nav>
+                <div class="item women">
+                    <a href="./index.html?tag=women">女裝</a>
+                </div>
+                <div class="item men">
+                    <a href="./index.html?tag=men">男裝</a>
+                </div>
+                <div class="item accessories">
+                    <a href="./index.html?tag=accessories">配件</a>
+                </div>
+            </nav>
+            <div class="feature">
+                <form action="./index.html" method="GET" class="item">
+                    <input type="text" class="search" name="keyword" />
+                </form>
+                <a href="" class="item cart">
+                    <div class="quantity"></div>
+                </a>
+                <div class="item member">
+                    <img src="./images/member.png" alt="member-web" />
+                </div>
+            </div>
+        </header>
+        <nav class="mobile">
+            <div class="item women">
+                <a href="./index.html?tag=women">女裝</a>
+            </div>
+            <div class="item men">
+                <a href="./index.html?tag=men">男裝</a>
+            </div>
+            <div class="item accessories">
+                <a href="./index.html?tag=accessories">配件</a>
+            </div>
+        </nav>
+        <div class="mobile-feature">
+            <a href="" class="item">
+                <div class="cart">
+                    <div class="quantity"></div>
+                </div>
+                <div>購物車</div>
+            </a>
+            <div class="item member">
+                <img src="./images/member-mobile.png" alt="member-mobile" />
+                <div>會員</div>
+            </div>
+        </div>
+        <!-- main -->
+        <main>
+            <div class="container">
+                <div class="shopping-cart">
+                    <div class="row item-title">
+                        <div class="summary">
+                            <div class="mainImg"></div>
+                            <div class="details"></div>
+                        </div>
+                        <div class="qty">數量</div>
+                        <div class="price">單價</div>
+                        <div class="subtotal">小計</div>
+                        <div class="remove-item"></div>
+                    </div>
+                    <div class="item-list"></div>
+                </div>
+                <div class="target">
+                    <div class="country">
+                        <div class="title">配送國家</div>
+                        <div class="choose">
+                            <select name="" id="">
+                                <option value="">國家或離島</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="country">
+                        <div class="title">付款方式</div>
+                        <div class="choose">
+                            <select name="" id="">
+                                <option value="">信用卡付款</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="reminder">
+                    ※ 提醒您：<br />
+                    ● 選擇宅配-請填寫正確收件人資訊，避免包裹配送不達<br />
+                    ● 選擇超商-請填寫正確收件人資訊(與證件相符)，避免無法領取<br />
+                </div>
+                <div class="recipient">
+                    <div class="title">收件資料</div>
+                    <div class="recipient-list">
+                        <div class="row">
+                            <div class="text">
+                                收件人姓名<small>&nbsp;*</small>
+                            </div>
+                            <div class="input">
+                                <input id="recipient-name" type="text" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="text">Email<small>&nbsp;*</small></div>
+                            <div class="input">
+                                <input id="recipient-email" type="text" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="text">
+                                手機號碼<small>&nbsp;*</small>
+                            </div>
+                            <div class="input">
+                                <input id="recipient-phone" type="text" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="text">
+                                收件地址<small>&nbsp;*</small>
+                            </div>
+                            <div class="input">
+                                <input id="recipient-address" type="text" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="text">
+                                配送時間<small>&nbsp;*</small>
+                            </div>
+                            <div class="input">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        value="morning"
+                                        name="delivery-time"
+                                    />
+                                    <span>08:00 - 12:00</span>
+                                </label>
+                                <label>
+                                    <input
+                                        type="radio"
+                                        value="afternoon"
+                                        name="delivery-time"
+                                    />
+                                    <span>14:00 - 18:00</span>
+                                </label>
+                                <label>
+                                    <input
+                                        type="radio"
+                                        value="anytime"
+                                        name="delivery-time"
+                                        checked
+                                    />
+                                    <span>不指定</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment">
+                    <div class="title">付款資料</div>
+                    <div class="recipient-list">
+                        <div class="row">
+                            <div class="text">
+                                信用卡號碼<small>&nbsp;*</small>
+                            </div>
+                            <div class="input">
+                                <div class="tpfield" id="card-number"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="text">
+                                有效期限<small>&nbsp;*</small>
+                            </div>
+                            <div class="input">
+                                <div
+                                    class="tpfield"
+                                    id="card-expiration-date"
+                                ></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="text">安全碼<small>&nbsp;*</small></div>
+                            <div class="input">
+                                <div class="tpfield" id="card-ccv"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="confirm">
+                    <div class="row subtotal">
+                        <div class="text">總金額</div>
+                        <div class="price">
+                            <span class="unit">NT.</span>
+                            <span class="number"></span>
+                        </div>
+                    </div>
+                    <div class="row shipping">
+                        <div class="text">運費</div>
+                        <div class="price">
+                            <span class="unit">NT.</span>
+                            <span class="number"></span>
+                        </div>
+                    </div>
+                    <div class="row line"></div>
+                    <div class="row total">
+                        <div class="text">應付金額</div>
+                        <div class="price">
+                            <span class="unit">NT.</span>
+                            <span class="number"></span>
+                        </div>
+                    </div>
+                    <div class="row pay">
+                        <button id="checkout">確認付款</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- footer -->
+        <footer>
+            <div class="footer-group">
+                <div class="links links-1">
+                    <div class="link">關於Stylish</div>
+                    <div class="link">服務條款</div>
+                    <div class="link">隱私政策</div>
+                </div>
+                <div class="links links-2">
+                    <div class="link">聯絡我們</div>
+                    <div class="link">FAQ</div>
+                </div>
+                <div class="social">
+                    <img src="./images/line.png" alt="line" />
+                    <img src="./images/twitter.png" alt="twitter" />
+                    <img src="./images/facebook.png" alt="facebook" />
+                </div>
+                <div class="copyright">&copy; 2018. All rights reserved.</div>
+            </div>
+        </footer>
+        <!-- loading animation -->
+        <div class="loading">
+            <img src="./images/loading.gif" alt="loading" />
+        </div>
+        <script src="https://js.tappaysdk.com/tpdirect/v5.4.0"></script>
+        <script>
+            TPDirect.setupSDK(
+                12348,
+                "app_pa1pQcKoY22IlnSXq5m5WP5jFKzoRG58VEXpT7wU62ud7mMbDOGzCYIlzzLF",
+                "sandbox"
+            );
+        </script>
+        <script src="./js/login.js"></script>
+        <script src="./js/localStorage.js"></script>
+        <script src="./js/lib.js"></script>
+        <script src="./js/cart.js"></script>
+        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    </body>
+</html>
