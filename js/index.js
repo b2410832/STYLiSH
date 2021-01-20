@@ -81,16 +81,6 @@ function getKeyvisual() {
 }
 
 // 1.顯示所有主視覺、圓點 > 2.顯示第一張圖片和圓點樣式為current樣式 > 3.開始自動輪播
-/*  <a href="" class="visual current">
-        <div class="wording">
-            於是<br />我也想要給你<br />一個那麼美好的自己。<br />不朽《與自己和好如初》
-        </div>
-    </a>
-    <div class="steps">
-        <div class="circle current"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-    </div>  */
 function showKeyvisual(data) {
     const keyvisual = document.querySelector(".keyvisual");
     data.map((visualData) => {
@@ -200,14 +190,6 @@ function getProducts(category, keywords, page) {
 }
 
 // 顯示回傳的所有產品
-/*  <a class="product" href="">
-    <img src="./images/product.jpg" alt="">
-    <div class="product-colors">
-        <div class="color" style="background-color: #979797;"></div>
-    </div>
-    <div class="product-title">前開衩扭結洋裝</div>
-    <div class="product-price">TWD.799</div>
-    </a>   */
 function showProducts(data) {
     const productsGroup = document.querySelector(".products");
     if (data.length < 1) {

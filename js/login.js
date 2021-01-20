@@ -18,12 +18,11 @@ window.fbAsyncInit = function () {
 
     // 讓每個頁面都可以取得登入狀態和使用者資料，若在profile page且已登入則顯示會員資料到畫面
     FB.getLoginStatus(function (response) {
-        console.log(response); // response.authResponse.accessToken 存取權杖
         if (response.status === "connected") {
             // POST facebook 存取權杖給signin API > 取得使用者資料 > 顯示到profile頁面
             let data = {
                 provider: "facebook",
-                access_token: response.authResponse.accessToken,
+                access_token: response.authResponse.accessToken, //存取權杖
             };
 
             document.querySelector(".loading").style.display = "block";

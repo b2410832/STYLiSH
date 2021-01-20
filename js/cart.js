@@ -16,30 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // 顯示購物車資料
-/* <div class="row">
-    <div class="summary">
-        <div class="mainImg">
-            <img src="./images/shoppingcart-item.jpg" alt="">
-        </div>
-        <div class="details">
-            前開衩扭結洋裝<br/>
-            201807201824<br/><br/>
-            顏色：白色<br/>
-            尺寸：S
-        </div>
-    </div>
-    <div class="qty">
-        <select>
-            <option value="1">1</option>
-            <option value="2">2</option>
-        </select>
-    </div>
-    <div class="price">NT. 799</div>
-    <div class="subtotal">NT. 799</div>
-    <div class="remove-item">
-        <img src="./images/cart-remove.png" alt="">
-    </div>
-</div>  */
 function showCartList() {
     if (cart.list.length > 0) {
         const itemList = document.querySelector(".item-list");
